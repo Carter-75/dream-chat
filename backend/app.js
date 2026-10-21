@@ -1,0 +1,179 @@
+// --- Environment and Dependencies ---
+const path = require('path');
+const fs = require('fs');
+if (!process.env.VERCEL) {
+  try {
+    const dns = require('node:dns');
+    dns.setServers(['8.8.8.8', '1.1.1.1']);
+  } catch (e) {}
+}
+
+const resolveEnvPath = () => {
+  const candidates = [
+    path.join(process.cwd(), '.env.local'), 
+    path.join(process.cwd(), 'backend', '.env.local'),
+    path.join(__dirname, '../.env.local')
+  ];
+  for (const c of candidates) { if (fs.existsSync(c)) return c; }
+  return null;
+};
+const envPath = resolveEnvPath();
+if (envPath) require('dotenv').config({ path: envPath });
+else require('dotenv').config();
+
+const express = require('express');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const cors = require('cors');
+const mongoose = require('mongoose');
+const helmet = require('helmet');
+
+
+
+const app = express();
+
+// --- Configuration ---
+const isProd = process.env.PRODUCTION === 'true' || process.env.VERCEL === '1';
+const prodUrl = process.env.PROD_FRONTEND_URL;
+const PROJECT_NAME = process.env.PROJECT_NAME || 'dream-chat';
+
+// Trust proxy for secure cookies on Vercel
+if (isProd) {
+  app.set('trust proxy', 1);
+}
+
+// --- Models & Passport Config ---
+
+
+// --- Routers ---
+const indexRouter = require('./routes/index');
+const chatRouter = require('./routes/chat');
+
+
+// --- MongoDB Setup ---
+const mongoURI = process.env.MONGODB_URI;
+let lastDbError = null;
+let dbConnectPromise = null;
+
+const connectDB = async () => {
+  if (mongoose.connection.readyState === 1) return;
+  if (mongoose.connection.readyState === 2 && dbConnectPromise) {
+    return dbConnectPromise;
+  }
+  
+  if (!mongoURI) {
+    lastDbError = 'No MONGODB_URI found in environment!';
+    console.warn('WARN: ' + lastDbError);
+    return;
+  }
+
+  try {
+    console.log('INFO: Connecting to MongoDB...');
+    dbConnectPromise = mongoose.connect(mongoURI, {
+      dbName: process.env.PROJECT_NAME || 'dream-chat',
+      serverSelectionTimeoutMS: 5000,
+      connectTimeoutMS: 10000
+    });
+    await dbConnectPromise;
+    console.log('OK: Connected to MongoDB');
+    lastDbError = null;
+  } catch (err) {
+    lastDbError = err.message;
+    console.error('ERROR: MongoDB Connection Failed:', err.message);
+  } finally {
+    dbConnectPromise = null;
+  }
+};
+
+// Initial connection
+connectDB();
+
+// --- Diagnostic Routes ---
+app.get('/api/health', async (req, res) => {
+  if (mongoose.connection.readyState !== 1) {
+    await connectDB();
+  }
+  const isConnected = mongoose.connection.readyState === 1;
+  const states = ['Disconnected', 'Connected', 'Connecting', 'Disconnecting'];
+  res.json({
+    status: 'online',
+    database: states[mongoose.connection.readyState] || 'Unknown',
+    readyState: mongoose.connection.readyState,
+    env: isProd ? 'production' : 'development',
+    hasMongoUri: !!mongoURI,
+    dbError: lastDbError,
+    timestamp: new Date().toISOString()
+  });
+});
+
+// --- Middlewares ---
+
+// Wait for DB middleware
+const dbCheck = async (req, res, next) => {
+  if (!mongoURI) return next();
+  if (req.path.startsWith('/chat') || req.path.startsWith('/status') || req.path.startsWith('/health')) return next();
+  if (mongoose.connection.readyState === 1) return next();
+  if (mongoose.connection.readyState === 0) await connectDB();
+  
+  let attempts = 0;
+  const interval = setInterval(() => {
+    attempts++;
+    if (mongoose.connection.readyState === 1) {
+      clearInterval(interval);
+      return next();
+    }
+    if (attempts >= 30) {
+      clearInterval(interval);
+      return res.status(503).json({ 
+        error: 'Database connection timeout. Please refresh or check MONGODB_URI.' 
+      });
+    }
+  }, 100);
+};
+
+app.use(helmet({
+  frameguard: false,
+  contentSecurityPolicy: false
+}));
+
+app.use(cors({
+  origin: true,
+  credentials: true
+}));
+
+// Apply DB check to all /api routes
+app.use('/api', dbCheck);
+
+app.use(cors({
+  origin: true,
+  credentials: true
+}));
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+
+
+
+app.get('/', (req, res) => {
+  res.send(`API for ${PROJECT_NAME} is running`);
+});
+
+// Mount at both /api and root to handle Vercel Service prefix stripping
+app.use('/api', chatRouter);
+app.use('/', chatRouter);
+app.use('/api', indexRouter);
+app.use('/', indexRouter);
+
+
+
+// Error handler
+app.use((err, req, res, next) => {
+  res.status(err.status || 500).json({
+    message: err.message,
+    error: isProd ? {} : err
+  });
+});
+
+module.exports = app;

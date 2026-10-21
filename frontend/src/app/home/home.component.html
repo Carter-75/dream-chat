@@ -1,0 +1,53 @@
+<div class="sky">
+  <div class="stars"></div>
+  <div class="moon"></div>
+
+  <header class="wrap hero">
+    <p class="kicker">No sign up. Just dreams.</p>
+    <h1>Dream <span>Chat</span></h1>
+    <p class="sub">Ask about your dreams, learn to lucid dream, explore sleep paralysis, the Gateway Process, Mall World, and the stories people swear are real. Answers come from a labeled library: documented research, videos, firsthand accounts, and traditions, kept separate so you always know what kind of claim you are hearing.</p>
+  </header>
+
+  <!-- Ad slot: top banner. Paste AdSense code here when ads go live. -->
+  <div class="wrap ad-slot" aria-hidden="true"><span>Advertisement</span></div>
+
+  <main class="wrap chat-card">
+    @if (notice()) {
+      <div class="notice">{{ notice() }}</div>
+    }
+    <div #scrollBox class="messages">
+      @for (m of messages(); track $index) {
+        <div class="row" [class.me]="m.role === 'user'">
+          <div class="bubble" [class.me]="m.role === 'user'">
+            <p class="who">{{ m.role === 'user' ? 'You' : 'Dream Guide' }}</p>
+            <p class="text">{{ m.content }}</p>
+          </div>
+        </div>
+      }
+      @if (sending()) {
+        <div class="row"><div class="bubble typing">Dreaming up an answer<span class="dots">...</span></div></div>
+      }
+    </div>
+
+    <div class="chips">
+      @for (chip of chips; track chip) {
+        <button type="button" class="chip" (click)="useChip(chip)">{{ chip }}</button>
+      }
+    </div>
+
+    <form class="composer" (ngSubmit)="send()">
+      <input name="draft" [ngModel]="draft()" (ngModelChange)="draft.set($event)"
+             placeholder="Tell me your dream, or ask a question..." autocomplete="off" maxlength="2000">
+      <button type="submit" [disabled]="sending() || !draft().trim()">Send</button>
+    </form>
+    <p class="fineprint">Free to use. A daily limit per visitor keeps the lights on.</p>
+  </main>
+
+  <!-- Ad slot: bottom rectangle. Paste AdSense code here when ads go live. -->
+  <div class="wrap ad-slot tall" aria-hidden="true"><span>Advertisement</span></div>
+
+  <footer class="wrap footer">
+    <p>Dream Chat shares dream content and sleep information for curiosity and learning. It is not medical advice. If sleep problems affect your health or daily life, talk with a clinician or a sleep specialist.</p>
+    <p class="dim">Built from a unified dreams knowledge base. Sources stay labeled: [Documented], [Video], [Reddit / firsthand], [Tradition], [Research claim - contested], [Guide].</p>
+  </footer>
+</div>
