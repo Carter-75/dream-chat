@@ -58,17 +58,28 @@ router.post('/chat', async (req, res) => {
   try {
     const OpenAI = require('openai');
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-    const completion = await client.chat.completions.create({
+    const requestArgs = {
       model: MODEL,
-      max_completion_tokens: 800,
+      // Nano tier models spend hidden reasoning tokens out of this same
+      // budget, so the cap must leave room for both reasoning and answer.
+      max_completion_tokens: 2500,
+      reasoning_effort: 'low',
       messages: [
         { role: 'system', content: SYSTEM_INTRO + '\n\nCorpus excerpts for this question:\n\n' + corpusText },
         ...cleanHistory
       ]
-    });
-    const reply = completion.choices && completion.choices[0] && completion.choices[0].message
+    };
+    let completion = await client.chat.completions.create(requestArgs);
+    let reply = completion.choices && completion.choices[0] && completion.choices[0].message
       ? completion.choices[0].message.content
       : '';
+    if (!reply) {
+      // One retry: nano models occasionally return an empty completion.
+      completion = await client.chat.completions.create(requestArgs);
+      reply = completion.choices && completion.choices[0] && completion.choices[0].message
+        ? completion.choices[0].message.content
+        : '';
+    }
     if (!reply) return res.status(502).json({ error: 'The dream guide went quiet for a moment. Try again.' });
     return res.json({ configured: true, reply: clean(reply) });
   } catch (err) {
