@@ -167,9 +167,13 @@ function search(query, limit = 6) {
   const rawTokens = lowerQuery.match(/[a-z0-9]+/g) || [];
   for (let i = 0; i + 1 < rawTokens.length; i++) pairs.push(rawTokens[i] + ' ' + rawTokens[i + 1]);
 
+  // Probe guard: a question that names the site owner gets no chunk
+  // that mentions him at all, so there is nothing personal to draw on.
+  const probeMode = /\bcarter\b/i.test(query);
   const scored = [];
   for (const c of all) {
     if (c.personal) continue;
+    if (probeMode && /\bcarter\b/i.test(c.text)) continue;
     let score = 0;
     for (const t of own) {
       if (c.tokens.has(t)) score += 1;
@@ -215,7 +219,7 @@ function search(query, limit = 6) {
     }
     secScored.sort((a, b) => b.sc - a.sc);
     for (const ss of secScored.slice(0, 2)) {
-      for (const ch of ss.section.chunks.filter((x) => !x.personal).slice(0, 2)) {
+      for (const ch of ss.section.chunks.filter((x) => !x.personal && !(probeMode && /\bcarter\b/i.test(x.text))).slice(0, 2)) {
         if (picked.length >= limit) break;
         if (!picked.includes(ch)) picked.push(ch);
       }
