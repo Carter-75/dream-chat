@@ -2348,7 +2348,7 @@ Claim labels used in this section: [Documented] means a study, label, review, or
 - [Carter fact] Carter is NOT taking medication for ADHD. The ADHD medication material in Section 20.2.1 is background only. It is not a description of his current regimen and must not be used as if he takes a stimulant, atomoxetine, guanfacine, or any other ADHD drug.
 - [Carter fact] Carter has never been fully lucid in a dream yet. Semi lucid moments, vivid dreams, false awakenings, and sleep paralysis should not be relabeled as a completed first lucid dream.
 - [Carter fact] Carter has had exactly one sleep paralysis episode in his life so far. It was short and audible only. He heard something, but he did not see a visual entity.
-- [Carter fact] Carter has bad social anxiety and IS taking a medication for that. The specific medication name was still being identified on Oct 23, 2026. It sounds to him like it starts with "EX". Escitalopram, brand name Lexapro, is the leading candidate, but Carter has NOT confirmed that name. Section 20.2.2 therefore works at the SSRI and SNRI class level, and every escitalopram specific point is conditional only.
+- [Carter fact] Carter has bad social anxiety and IS taking escitalopram (brand name Lexapro) for it, confirmed by Carter on Oct 23, 2026 from his own prescription bottle photo: escitalopram 10 mg tablets, label directions to take 0.5 tablet by mouth for the first days, then 1 tablet daily (the exact number of half tablet days is cut off in the photo). Escitalopram is an SSRI, so the SSRI material in Section 20.2.2 applies to him directly; the SNRI material is background only and does not describe his medication.
 - [Guide] The practical question is not "Can someone with ADHD do this?" Community reports and the technique literature both say yes. The real question is which version of each technique places the least load on sustained attention, working memory, and essay style journaling, while protecting total sleep.
 
 ## 20.1 What is documented about ADHD and sleep
@@ -2399,7 +2399,7 @@ This is the point where the research has to be stated carefully. REM differences
 Read this whole part with the status box in Section 20.0 in view. There are two different medication topics here, and they must not be merged:
 
 1. ADHD medications: background only, because Carter does not take them.
-2. Anxiety medication: a live factor, because Carter does take one, but the exact name is still pending confirmation.
+2. Anxiety medication: a live factor. Carter takes escitalopram 10 mg (confirmed Oct 23, 2026), an SSRI. The SSRI material applies to him; SNRI material is background only.
 
 ### 20.2.1 ADHD medications: background only, not Carter's situation
 
@@ -2433,9 +2433,9 @@ Read this whole part with the status box in Section 20.0 in view. There are two 
 - [Documented] In a trial of 49 adults with ADHD and delayed sleep phase, melatonin advanced dim light melatonin onset by about 1.5 hours and reduced ADHD symptoms in the primary report. A secondary analysis found that sleep times did not advance along with melatonin onset without behavioral coaching.
 - [Guide] Present melatonin as a phase and sleep onset tool with trial support. No dream vividness effect was established in the material retrieved. It is not a lucid dreaming supplement on this evidence.
 
-### 20.2.2 Anxiety medication and dreams: SSRI and SNRI class level, name pending
+### 20.2.2 Anxiety medication and dreams: escitalopram (SSRI), confirmed
 
-Status line for the merge: Carter IS taking an anxiety medication. The name is pending. Escitalopram / Lexapro is a candidate only. When the parent chat confirms the exact drug, this subsection can be pinned to that drug. Until then, use the class level material below and treat every escitalopram specific number as conditional.
+Status line: Carter confirmed escitalopram (Lexapro) 10 mg on Oct 23, 2026 from his prescription bottle. The SSRI and escitalopram specific material below applies to him. SNRI material is kept as class background only.
 
 #### Why this is a live factor for Carter
 
@@ -2712,6 +2712,6 @@ Ranking basis: what a first time lucid dreamer with no completed lucid dream yet
 - [Documented] Gap: REM findings in ADHD conflict in direction across age groups and studies. No strand should smooth that conflict into a single ADHD REM profile.
 - [Documented] Gap: no galantamine interaction study with ADHD stimulants was found, and no interaction conclusion can be drawn for galantamine with Carter's anxiety medication while that medication is unidentified.
 - [Documented] Gap: vivid dream content differences in ADHD rest on low quality secondary summaries, not primary studies. Nightmare frequency has real studies behind it. Dream content style does not, yet.
-- [Documented] Gap: Carter's anxiety medication name is pending confirmation. The escitalopram material in Section 20.2.2 is conditional until he confirms it, and SNRI specific numbers must not be applied to him unless his confirmed drug turns out to be an SNRI.
+- [Documented] Resolved Oct 23, 2026: Carter's anxiety medication is escitalopram 10 mg (confirmed from his bottle). SNRI specific numbers in this section are background and must not be applied to him.
 - [Documented] Gap: direct Reddit access limits from the earlier strands in this corpus applied again in this pass. r/LucidDreaming and r/ADHD threads were not pulled verbatim, and site restricted searches returned no usable results, so community material here comes from LD4all and retrieved guides rather than fresh Reddit threads.
 - [Documented] Gap: no retrieved study measures lucid dream frequency as an outcome of SSRI or SNRI treatment, and no retrieved study measures deliberate sleep paralysis entry success by ADHD status. Both questions are open, and Carter's own log is currently the only planned instrument that will answer them for Carter.

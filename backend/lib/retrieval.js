@@ -109,7 +109,8 @@ function loadChunks() {
             // the site owner's personal facts inside the corpus file.
             // The file is synced as written, but those chunks are never
             // eligible for the public chat's lookup.
-            personal: slice.includes('[Carter fact]') || /\bcarter\b/i.test(heading),
+            personal: slice.includes('[Carter fact]') || /\bcarter\b/i.test(heading) ||
+              /Carter (takes|is taking|has|confirmed|is not|is on|uses)|Carter's anxiety medication/i.test(slice),
             tokens: new Set(tokenize(slice + ' ' + heading)),
             headingTokens: new Set(tokenize(heading))
           };
