@@ -65,7 +65,12 @@ const GROUPS = [
   { phrases: ['spirit', 'ghost', 'haunted', 'curse', 'entity'], words: ['spirit', 'ghost', 'haunting', 'curse', 'entity', 'attachment', 'blessing', 'luck'] },
   { phrases: ["can't sleep", 'cannot sleep', 'insomnia', 'trouble sleeping', 'wake up a lot'], words: ['insomnia', 'sleepless', 'waking', 'restless', 'hygiene', 'disorder'] },
   { phrases: ['what does it mean', 'meaning of', 'symbol'], words: ['meaning', 'symbol', 'interpretation', 'interpret', 'signify', 'theme'] },
-  { phrases: ['falling', 'teeth', 'flying', 'being chased', 'snake'], words: ['falling', 'teeth', 'flying', 'chase', 'snake', 'theme', 'common'] }
+  { phrases: ['falling', 'teeth', 'flying', 'being chased', 'snake'], words: ['falling', 'teeth', 'flying', 'chase', 'snake', 'theme', 'common'] },
+  // Thinking, consciousness, and intelligence cluster (Carter, Oct 23, 2026).
+  { phrases: ['how thinking works', 'how does thinking work', 'conscious mind', 'subconscious', 'consciousness'], words: ['thinking', 'thought', 'conscious', 'subconscious', 'consciousness', 'mind', 'awareness', 'inner', 'voice'] },
+  { phrases: ['at birth', 'when does consciousness start', 'newborn', 'babies think', 'born conscious'], words: ['birth', 'newborn', 'infant', 'baby', 'born', 'start', 'begin', 'delayed', 'develop'] },
+  { phrases: ['reincarnation', 'past life', 'past lives', 'birthmark', 'born again', 'lived before'], words: ['reincarnation', 'reincarnated', 'past', 'life', 'lives', 'birthmark', 'birthmarks', 'stevenson', 'children', 'remember', 'died', 'death', 'wound', 'carry'] },
+  { phrases: ['street smarts', 'book smarts', 'creative thinking', 'types of intelligence', 'kind of smart', 'internal thinking'], words: ['intelligence', 'intelligent', 'smart', 'smarts', 'creative', 'creativity', 'practical', 'internal', 'iq', 'savant'] }
 ];
 
 let chunks = null;
