@@ -105,6 +105,11 @@ function loadChunks() {
             heading,
             topHeading,
             text: slice,
+            // Privacy firewall: chunks carrying [Carter fact] lines hold
+            // the site owner's personal facts inside the corpus file.
+            // The file is synced as written, but those chunks are never
+            // eligible for the public chat's lookup.
+            personal: slice.includes('[Carter fact]'),
             tokens: new Set(tokenize(slice + ' ' + heading)),
             headingTokens: new Set(tokenize(heading))
           };
@@ -156,7 +161,7 @@ function expandQuery(query) {
 function search(query, limit = 6) {
   const all = loadChunks();
   const { own, expanded } = expandQuery(query);
-  if (!own.length && !expanded.length) return all.slice(0, limit);
+  if (!own.length && !expanded.length) return all.filter((c) => !c.personal).slice(0, limit);
   const lowerQuery = query.toLowerCase();
   const pairs = [];
   const rawTokens = lowerQuery.match(/[a-z0-9]+/g) || [];
@@ -164,6 +169,7 @@ function search(query, limit = 6) {
 
   const scored = [];
   for (const c of all) {
+    if (c.personal) continue;
     let score = 0;
     for (const t of own) {
       if (c.tokens.has(t)) score += 1;
@@ -209,7 +215,7 @@ function search(query, limit = 6) {
     }
     secScored.sort((a, b) => b.sc - a.sc);
     for (const ss of secScored.slice(0, 2)) {
-      for (const ch of ss.section.chunks.slice(0, 2)) {
+      for (const ch of ss.section.chunks.filter((x) => !x.personal).slice(0, 2)) {
         if (picked.length >= limit) break;
         if (!picked.includes(ch)) picked.push(ch);
       }
