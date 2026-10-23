@@ -1767,3 +1767,242 @@ Exchange logic, stated once for the whole section: in these traditions luck is n
 - Loosh is labeled [Research claim - contested]: Monroe's original concept vs the later soul-trap distortion are kept separate per the source that distinguishes them.
 - Deliverance and demonology sources are practitioner literature, labeled [Tradition]; their staging models are reported as the traditions state them.
 - This file reuses corpus material already in DREAMS-UNIFIED.md (Baku, bangungot / batibat / SUNDS / dab tsog, Focus 22 to 23 and Focus 27, mimic rule, removal methods, Asclepius, dreamcatchers) without re-deriving it; line references are to the unified file as of Oct 22, 2026.
+
+
+---
+
+# 18. Stones and crystals for dreams (strand file, ready to slot into DREAMS-UNIFIED.md as Section 18)
+
+Strand built Oct 23, 2026 for Carter's Dreams knowledge base. Merge target: DREAMS-UNIFIED.md (current last section is 17, spirit mechanics).
+
+How to read this file: every claim carries a source label. [Tradition] means modern crystal healing tradition and folklore as the sources present it, not established fact. [Reddit / firsthand] means a personal report or community pattern. [Documented] means checkable history, mineralogy, or published research. [Research claim - contested] means a claim that circulates as research-like but is not backed by controlled evidence. No crystal claim in this file should be read as medical fact, and Section 7 of this strand states the evidence position plainly.
+
+## 18.1 The short version
+
+[Tradition] In modern crystal practice, stones are sorted by what they are said to do to the night: activators are said to make dreams more vivid, more lucid, and easier to recall; calmers are said to quiet the mind and deepen sleep; protectors and grounders are said to block nightmares and keep the sleeper anchored. The single most repeated caution in the community literature is that the activator stones do not choose the direction: a stone credited with intensifying dreams is also the stone people blame for intensified nightmares. The two-way pattern is covered in Section 18.6.
+
+## 18.2 Quick table: stone, claimed dream effect, claimed mechanism, placement
+
+Mechanism column is the framing the sources themselves use, mostly chakra and vibration language. It is recorded as their framing, not endorsed as physics.
+
+| Stone | Claimed dream effect [Tradition] | Claimed mechanism (as sources present it) | Common placement |
+| --- | --- | --- | --- |
+| Amethyst | Vivid and intuitive dreams, better recall, fewer nightmares, helps insomnia from an overactive mind | Third eye and crown chakras, high calming vibration | Under pillow, nightstand cluster |
+| Moonstone | Lucid dreaming, intuitive and emotionally healing dreams, gentle recall | Moon cycles, crown chakra, feminine lunar energy | Under pillow, worn as pendant to bed, near pillow at full moon |
+| Labradorite | Lucid dreaming, bridges conscious and unconscious, protection during sleep | Third eye, aura shield, transformation energy | Bedside, under pillow, worn |
+| Howlite | Calms an overactive mind, insomnia aid, sweet dreams; blue howlite specifically for dream recall | Crown chakra, stilling vibration | Under pillow, nightstand, grid around bed |
+| Lepidolite | Calms anxiety, deepens sleep, eases broken sleep schedules, insightful dreams, astral travel | Third eye and crown chakras; folk link to its lithium content | In pillowcase or under pillow, held in wind-down |
+| Herkimer diamond | One of the strongest dream recall claims; vivid dreams, astral travel | Crown and brow chakras, high frequency light energy, attunement stone | Under pillow, nightstand, meditation before sleep |
+| Clear quartz | Amplifies intention and the effect of any other stone; clarity and recall support | Crown chakra, master healer, amplifier | Grid center, nightstand, held during intention setting |
+| Selenite | Cleanses the sleep space, calm and clear mind, protective white light, lucid support | Crown chakra, purifying high vibration | Tower or wand on nightstand, beside other stones, room corners in grids |
+| Black tourmaline | Protection in sleep, fewer nightmares, blocks negative energy and, in some sources, sleep paralysis intrusions | Root chakra, absorption and shielding, grounding | Nightstand, under bed, four corners of bed or room grid |
+| Obsidian (black) | Protection, shadow work dreams, absorbs negativity; strong, not gentle | Root chakra, mirror shield that reflects negativity back | Doorway, bedside; some sources keep it out of the bedroom |
+| Hematite | Grounding, sound sleep, nightmare protection, anchors the sleeper | Root chakra, iron stone, earth connection | Under pillow, by the bed, at the feet, worn |
+| Fluorite (esp. violet) | Mental clarity for lucid dreaming; violet fluorite sold as a Dream Maker that wards off bad dreams | Third eye, order and focus vibration | Under pillow (tumbled), near bed |
+| Lapis lazuli | Vivid dreams, dream recall, insight, protection in the astral realm | Third eye chakra, wisdom vibration | Nightstand, beside the dream journal, worn as bracelet |
+| Sodalite | Prophetic dreaming, unites logic with intuition, said to relieve insomnia | Throat and third eye chakras | Bedside, meditation before sleep |
+| Celestite | Peaceful deep sleep, dream awareness, angelic or guide communication, out of body support | Crown and throat chakras, gentle celestial vibration | Cluster on nightstand, under pillow (fragile, see safety) |
+| Azurite | Third eye activation, psychic and vivid dreams, dream interpretation; one source also warns it can disturb sleep | Third eye, concentrated insight vibration | Meditation and journaling rather than all night by the bed |
+| Moldavite | Intense vivid dreams, first lucid dreams reported, transformation; also the most warned about stone in this file | High frequency, extraterrestrial origin energy, all chakras at once | Worn or meditated with by day first; under pillow only for the experienced, per the warnings |
+| Charoite | Deep sleep, powerful dreams, releases deep fears, fewer nightmares in user reports, bridges conscious and subconscious | Crown and heart chakras, transformation vibration | Under pillow, worn to bed |
+| Kunzite | Gentle calming, peaceful sleep, dissolves negativity, soothes the heart into rest | Heart chakra, loving vibration | Bedside, worn, often recommended for children in the tradition |
+| Smoky quartz | Grounding, dispels nightmares and negative energy, mildly sedative and relaxing in the older literature, enhances dreams and channeling per Melody | Root chakra, transmutation of negativity | Bedside, grid corners, under pillow |
+| Rose quartz | Gentle and beautiful dreams, prevents nightmares and night terrors in the tradition, calms the heart, good for children afraid of the dark | Heart chakra, unconditional love vibration | Under pillow, by the bed, worn |
+| Jade | The classic dream stone: dream recall, dream solving, insightful dreams, releases suppressed emotions through dreams | Heart chakra, serenity and wisdom energy | Under pillow (Melody's exact instruction), worn |
+| Bloodstone | Protection, boosts dreaming and intuition, revitalizing sleep; also used as a grounding partner for moldavite | Root and heart, earth energy, courage vibration | Under pillow, worn, paired with strong activators |
+| Blue kyanite (bonus) | Healing dreams, strong recall, dream solving, lucid support | Throat and third eye, self clearing (said to need no cleansing) | Under pillow, bedside |
+| Red jasper (bonus) | Dream recall, replays dreams for later review, grounding protection during dream journeys | Root chakra, earth energy | Under pillow, bedside |
+| Chrysoprase (bonus) | Alleviates recurring nightmares, especially for children, in the tradition | Heart chakra, soothing energy | Bedside, under pillow |
+
+## 18.3 Per-stone detail
+
+### The activators: said to turn dreams up
+
+**Amethyst.** [Tradition] The default dream stone of the whole tradition: the stone most sources name first for dreams, recall, and protection in sleep. Sources credit it with intuitive and prophetic feeling dreams, relief from insomnia caused by mental chatter, and guarding against bad dreams; it is placed under the pillow or as a cluster on the nightstand. [Reddit / firsthand] A forum account quoted in nightmare roundups: a parent or aunt reported a little girl with frequent nightmares was given amethyst for under her pillow, and the child wrote back that the bad dreams stopped. Another user quoted in the same roundup genre said they went from waking three times a night with bad dreams to sleeping straight through with amethyst by the pillow. These are anecdotes, recorded as anecdotes.
+
+**Moonstone.** [Tradition] Tied to moon cycles and said to be strongest near the full moon. Credited with lucid dreaming, intuitive dreams, emotional processing dreams, and gentle recall on waking. Worn as a pendant to bed or kept under the pillow. [Reddit / firsthand] A Redditor quoted in a nightmare roundup joked that it was either the moonstone or placebo magic, but their sleep felt smoother and they did not care which. That quote is worth keeping because it is the honest version of a large share of community reports.
+
+**Labradorite.** [Tradition] The stone of transformation and magic, named for Labrador in Canada, with Inuit lore connecting its flash to the aurora borealis trapped in rock. Credited with bridging the conscious and unconscious mind, facilitating lucid dreaming, and protecting the aura during sleep while raising consciousness. Placed in the bedroom or worn; sources advise moonlight or sound for cleansing and warn that long sun exposure can fade it. [Reddit / firsthand] The two-way pattern shows up here: a workshop anecdote retold by a crystal teacher describes a woman who slept with labradorite and carnelian under her pillow and woke restless, emotional, and tired, then switched to amethyst and rose quartz and slept peacefully. Other sources list labradorite as too stimulating to put under the pillow at all (Section 18.6).
+
+**Herkimer diamond.** [Tradition] A doubly terminated quartz, not an actual diamond. [Documented] Named for Herkimer County, New York, where it is mined. In the tradition it carries some of the strongest dream claims of any stone: called an attunement stone and a dream stone, credited with powerful dream recall, vivid visualization, and astral travel, used in the pillow or in meditation before sleep. OMTimes calls it one of the best crystals for dream recall.
+
+**Clear quartz.** [Tradition] The amplifier. Credited less with a dream effect of its own and more with boosting intention and multiplying whatever stone it is paired with, which is why it sits at the center of grids and is held during pre-sleep intention setting. The flip side appears in Section 18.6: because it is said to amplify thoughts and emotions, at least one widely shared guide says not to sleep with it under the pillow.
+
+**Lapis lazuli.** [Tradition] Third eye stone of wisdom and vision, credited with vivid dreams, recall, insight into dream meaning, and protection while traveling in the astral realm. Practical pairing in the sources: keep it by the dream journal, or hold it while meditating on a dream in the morning. [Documented] Lapis was one of the prestige stones of ancient Egypt and appears in Tutankhamun's funerary goods, a protection and afterlife association, though not a documented dream use.
+
+**Sodalite.** [Tradition] Credited with prophetic dreaming in the older crystal literature (Melody's tradition), with uniting logic and the spiritual so dreams can be both vivid and interpretable, and with relieving insomnia.
+
+**Celestite.** [Tradition] The gentle sky-blue cluster stone of peaceful sleep, credited with dream awareness, communication with guides or angels, and support for out of body experiences. Usually a nightstand cluster rather than a pillow stone. It is very soft (Mohs 3 to 3.5), which matters for the safety section.
+
+**Azurite.** [Tradition] Third eye concentrator, credited with psychic dreams and dream interpretation. One dream guide tells an anecdote of a friend whose night terrors eased with an azurite cluster and lavender, and in the same breath warns that azurite is not great for bedrooms because it disturbs sleep. Both halves are kept here because the disagreement inside a single source is typical of this literature. Azurite is also a copper mineral, which matters for water safety.
+
+**Moldavite.** [Documented] A green tektite, natural glass formed by a meteorite impact roughly 15 million years ago, found in the Czech region. It is not a crystal at all, and the tradition treats that origin as the point: an extraterrestrial stone with a very high frequency. [Tradition] Credited with intensely vivid dreams, first lucid dreams, synchronicities, and forced transformation. [Reddit / firsthand] The firsthand literature is full of a specific pattern: a heat or tingling flush on holding it (the so-called moldavite flush), emotional release, and dreams that get vivid fast. It gets its own caution entry in Section 18.6 because it is the stone most often reported as too much at night.
+
+**Charoite.** [Documented] A purple silicate found only near the Chara River in Siberia, described scientifically in 1978, so it has no ancient history at all; its whole lore is modern. [Tradition] Called a stone of transformation, historically folk-sold as a cure for insomnia that bestows deep sleep and powerful dreams. [Reddit / firsthand] User reports collected by retailers describe deeper sleep, more vivid dreams, better recall, and fewer nightmares; lucid dreamers and shadow workers use it worn to bed or under the pillow.
+
+**Fluorite.** [Tradition] The focus stone, credited with mental clarity that helps the mind stay aware in dreams, supporting lucidity. Violet fluorite has a specific niche: Crystal Vaults sells it as a Dream Maker crystal that protects the mind during sleep, wards off the negative energy behind nightmares, and forms a kind of cocoon for undisturbed dreaming. Soft stone, Mohs 4, see safety.
+
+### The calmers: said to quiet the night
+
+**Howlite.** [Tradition] Called an excellent antidote to insomnia, especially insomnia from an overactive mind, in Judy Hall's tradition: place it under the pillow, or grid it around the bed. Blue howlite gets the specific dream job in the same literature: aiding dream recall and access to the insights dreams bring. One modern dream guide contradicts itself in an instructive way, praising howlite for sweet dreams and then warning it is not great for bedrooms, a disagreement flagged rather than resolved.
+
+**Lepidolite.** [Documented] A lithium-bearing mica, Mohs 2.5 to 3, flaky and soft. [Tradition] The stone of transition and the tradition's main answer to anxiety driven insomnia and messed up sleep schedules; its calming reputation in folk sources is explicitly tied to its lithium content, an association, not a dose: the amount of lithium in a tumbled stone on a nightstand is not a medication and nothing in the sources or the literature shows it transfers to the sleeper. Credited also with insightful dreams and astral travel. Kept in the pillowcase or under the pillow. It flakes in water, so moonlight cleansing is the standard advice.
+
+**Celestite, kunzite, rose quartz.** [Tradition] The gentle end of the shelf. Kunzite is credited with dissolving negativity and soothing the heart, and is one of the stones the tradition recommends for children's sleep. Rose quartz is one of the most recommended sleep stones for children in the tradition, credited with beautiful dreams, prevention of nightmares and night terrors, and helping children not fear the dark; a parent quoted in a nightmare roundup said her daughter sleeps with rose quartz and says it feels like a friend is with her. Rose quartz also fades in sun, which is why moonlight is its standard charging method in the sources.
+
+### The protectors and grounders: said to guard the sleeper
+
+**Black tourmaline.** [Tradition] The all-purpose protector of modern practice: absorbs negativity, shields the sleeping space, reduces nightmares. One sleep paralysis guide puts it top of a protection list for SP and energetic attacks, placed by the bedside or at entry points like windows and doorways. A practitioner tradition from Judy Hall places pieces at the four feet of the bed for nightmare troubled sleepers, and one practitioner anecdote tells of gridding a teenager's bed and room with black tourmaline after dowsing found a ley line through the bed, after which the girl slept well (anecdote, recorded as such). [Tradition, disagreement] One lucid dreaming guide warns the opposite way: that black tourmaline's grounding can hinder lucid dreaming and should be kept away from lucid work. Both positions are in the literature; which one a given source takes depends on whether the goal is protection or lucidity.
+
+**Obsidian.** [Documented] Volcanic glass, used for tools and mirrors for thousands of years, including Aztec scrying mirrors. [Tradition] The mirror shield: reflects negativity back rather than absorbing it, used for shadow work dreams and deep subconscious digging, and credited in one dream recall list with protection plus subconscious access. Because it is classed as intense, some bedroom guides keep it at the doorway or out of the bedroom entirely, and it is said to need frequent cleansing because of what it absorbs or reflects.
+
+**Hematite.** [Documented] An iron oxide, heavy and metallic, and iron itself has one of the oldest protection pedigrees in folklore: the horseshoe over the door, the iron nail in the frame. [Tradition] The grounding stone: anchors the sleeper through the root chakra, credited with sound sleep, nightmare protection, and regrouping after jet lag and stress; also paired with moldavite to take the edge off it. It can rust if kept wet, see safety.
+
+**Smoky quartz.** [Tradition] Grounding and transmutation: takes negative energy and changes it, dispels nightmares, mildly sedative and relaxing in Melody's older literature, which also credits it with enhancing dreams and channeling. A common grid corner stone for protection layouts.
+
+**Bloodstone.** [Tradition] The soldier's protection stone of the older literature: courage, grounding, and care. Dream lists credit it with boosting dreaming and intuition and with revitalizing sleep; one sleep source gives the concrete instruction to place it under the pillow to stimulate dreaming. Its second job in community practice is as a grounding partner stone worn alongside moldavite.
+
+**Selenite.** [Tradition] The cleanser: said to clear the energy of a room and of other stones, to set a barrier of white light around the sleeping area in sleep paralysis protection guides, and to support calm, clear, lucid sleep. Usually a tower, wand, or plate on the nightstand, or one of the corner stones of a room grid. [Documented] Selenite is gypsum, calcium sulfate, Mohs 2, and it physically dissolves and clouds in water, which drives the biggest safety rule in Section 18.5.
+
+**Jade.** Covered in the history section, because jade's dream reputation is the oldest documented one in this file. [Tradition] Melody's entry, quoted word for word by later sources: jade is known as a dream stone, improves remembering of dreams, assists in dream solving, and is used to release suppressed emotions via the dream process, with a piece placed under the pillow before sleep.
+
+## 18.4 History: what is actually documented
+
+- **Amethyst and Greece.** [Documented] The name comes from Greek amethystos, not drunk or not intoxicated. Greeks and Romans wore it and carved drinking vessels from it in the belief it guarded against drunkenness and preserved a sober, sane mind; the myth of Dionysus and the maiden Amethyst is a later literary invention (Rémy Belleau, 16th century), not a classical text. Classical tradition did connect it to sleep and dreams: EarthDate's summary notes it was thought to improve sleep and provide good dreams, and one crystal history source reports traditional Chinese medicine prescribing ground amethyst for stomach pain or bad dreams, recorded here as a reported tradition, not a verified medical text.
+- **Amethyst and the dream stone word.** [Tradition] The Hebrew word for the amethyst in Aaron's breastplate, ahlamah, is often glossed in crystal literature as dream stone (from the root for dreaming). The gloss is widely repeated in the tradition and is recorded here as the tradition's claim.
+- **Amethyst in Egypt.** [Tradition, secondary sources] Amethyst was used as a gemstone in ancient Egypt, and secondary crystal histories say Egyptian soldiers wore it in battle for courage and that it guarded against fearful and guilty feelings. The Egyptian use of amethyst in jewelry and seals is documented archaeologically; the specific dream link is not.
+- **Jade in China.** [Documented] Jade (nephrite, later also jadeite) has been worked in China since at least 6000 BC, was believed to preserve the body and confer immortality, and was made into burial suits for Han dynasty royalty, discovered in 1968 at Mancheng, thousands of plaques sewn with gold wire. Jade and later porcelain pillows are documented in Chinese material culture from the Warring States and Han periods onward; jade pillows in the Myers collection pair a sun bird and a moon toad for husband and wife. [Tradition] Later lore says emperors slept on jade pillows to preserve vitality and youth, and Chinese dream tradition makes jade the dream stone of recall and dream solving (Section 18.3).
+- **Egypt and lapis.** [Documented] Lapis lazuli, carnelian, and turquoise were prestige materials in ancient Egypt, used in amulets, scarabs, and royal funerary goods, with protection and rebirth meanings. A direct ancient Egyptian dream use of lapis is not documented in the sources gathered; the dream claims for lapis are modern tradition.
+- **Labradorite.** [Documented] First recorded by Moravian missionaries in Labrador in the late 18th century, so, like charoite and moldavite, its lore is entirely modern despite the ancient feel of the Inuit aurora story attached to it.
+- **The honest summary.** [Documented] Ancient cultures demonstrably prized these stones, carved them, buried their kings in them, and tied them to sobriety, courage, immortality, and protection. The specific claim that a given stone changes dreams is, in almost every case, a modern crystal healing attribution (Melody's Love Is in the Earth and Judy Hall's The Crystal Bible are the two books most modern lists trace back to), not an ancient text. Jade's dream stone label is the notable exception with older roots in Chinese tradition.
+
+## 18.5 How people use them: methods
+
+[Tradition] and [Guide] assembled from the practice literature:
+
+- **Under the pillow.** The most common method in the whole file. Small tumbled stones go inside the pillowcase or under the pillow: amethyst, moonstone, howlite, lepidolite, herkimer diamond, jade, bloodstone, smoky quartz, rose quartz. Practical safety notes (plain guidance, not a crystal claim): use tumbled stones, not raw points or clusters, which are sharp and can break; a small pouch keeps them from ending up in the bed; keep small stones away from small children and pets.
+- **Bedside and nightstand.** The default for clusters and fragile stones: amethyst clusters, celestite clusters (too fragile for a pillow), selenite towers, lapis by the journal. Sources frame the nightstand as keeping the stone in the sleep space without direct contact.
+- **Worn to bed.** Moonstone pendants, lapis bracelets, moldavite pendants, charoite jewelry: the tradition says day wear prepares the stone and the wearer, and sleeping in the piece carries it into the dream.
+- **Held before sleep.** A short pre-sleep meditation holding the stone, setting an intention (the lucid dreaming literature pairs this with affirmations, the same slot MILD uses), then placing the stone. Sources on dream recall pair the stone with a stated intention to remember.
+- **Crystal grids by the bed.** [Tradition] A grid is a geometric arrangement said to focus and connect the stones: a center stone (often clear quartz or amethyst) holding the intention, supporting stones around it in a pattern, then activation by tracing lines between stones with a finger or a quartz point while stating the intention. Sleep and protection versions in the sources: black tourmaline with selenite in the four corners of the room; black tourmaline at the four feet of the bed; amethyst center with rose quartz, smoky quartz, and selenite around it on the nightstand; mini grids tucked under the bed. Guides say to leave a healing grid up about one lunar cycle, visit it briefly each day, then dismantle, cleanse, and rebuild deliberately.
+- **Dream journal pairing.** The practice literature consistently pairs stones with a journal rather than treating the stone as the whole method: journal and pen at the bedside, the recall stone (lapis, amethyst, clear quartz) on or beside the journal, write immediately on waking before the memory fades. This pairing matters for Section 18.7: journaling itself is one of the best supported dream recall techniques in the wider Dreams corpus, so a stone routine that makes someone journal nightly has a working part built in whether or not the stone does anything.
+- **Cleansing and charging claims.** [Tradition] Stones are said to absorb energy and need cleansing, and to charge under the full moon on a windowsill. Other standard methods: smoke (sage, palo santo, incense), sound (singing bowl, bell), resting on a selenite plate, salt, and running water. The tradition is not consistent about which stones need it: blue kyanite and selenite are often said to be self clearing. The physical safety rules below override the tradition wherever they conflict.
+
+### Physical safety: the part that is not a matter of belief
+
+[Documented] These are mineral facts from gem safety guides, and they are the hard rules of this strand:
+
+- **Selenite dissolves in water.** Gypsum, Mohs 2. Do not rinse, soak, or leave it anywhere damp. Clean it dry, or with sound, smoke, or moonlight per the tradition.
+- **Copper stones are toxic in water.** Malachite and azurite release copper compounds. Never use them in drinking water, baths, or direct contact elixirs, and keep azurite dry. The same elixir warning lists cover cinnabar (mercury), galena (lead), realgar and orpiment (arsenic), and pyrite.
+- **Soft and flaky stones keep dry.** Lepidolite (Mohs 2.5 to 3) flakes and delaminates in water; celestite (Mohs 3 to 3.5) crumbles; fluorite (Mohs 4) can crack with temperature change and prolonged soaking; howlite is porous; lapis lazuli contains calcite and pyrite inclusions that degrade in water; calcite dissolves slowly. Moonlight, smoke, or sound are the safe cleansing routes for all of these.
+- **Hematite rusts.** Iron oxide plus water equals rust staining and surface damage.
+- **Sun fades stones.** Prolonged sunlight permanently fades amethyst, rose quartz, fluorite, smoky quartz, and kunzite (kunzite fades fast). This is the physical reason moonlight charging became the standard advice for exactly the sleep stones.
+- **Sharp points and clusters do not belong under pillows.** Quartz points can cut and break; this is a plain physical point, and several sleep guides say the same for comfort reasons.
+
+## 18.6 The caution pattern: intensifiers cut both ways
+
+This is the pattern Carter's version of this corpus cares about, and the community literature supports it consistently: the stones marketed as dream intensifiers are the same stones users report removing from the bedroom.
+
+- **Moldavite is the headline case.** [Reddit / firsthand] and practitioner warnings agree: sleeping with moldavite under the pillow or in the bedroom is repeatedly reported to produce intensely vivid dreams that tip into disturbing dreams and nightmares, restlessness, racing heart sensations, and broken sleep. The standard community fix is mechanical: move the stone to another room, work with it in short daytime sessions only, and pair it with a grounding stone (hematite, black tourmaline, bloodstone) when it is used at all. One effects guide adds the community detail that wood is said to amplify moldavite, so a stone causing bad dreams should not sit on wooden furniture near the bed.
+- **Labradorite and clear quartz get under-pillow warnings in some guides.** [Tradition] A widely shared list of stones not to sleep with names labradorite (heightens intuition too much during sleep), clear quartz (amplifies emotions and thoughts), carnelian and pyrite (too energizing or stimulating), and moldavite (too intense, triggers deep processing), and recommends the calmers instead: amethyst, howlite, moonstone, lepidolite, selenite. The labradorite anecdote in Section 18.3 (restless, emotional, tired after labradorite under the pillow) is the firsthand version of the same warning.
+- **Azurite's split verdict.** [Tradition] The same guide that credits azurite with easing one person's night terrors warns it disturbs sleep and is not great for bedrooms. A stone credited with third eye activation being blamed for busy, disturbed sleep is the two-way pattern in miniature.
+- **Grounding versus lucidity is a stated trade-off.** [Tradition] Protection oriented sources put black tourmaline at the bed; lucidity oriented sources warn its grounding may hinder lucid dreaming. The tradition itself frames these as opposite pulls: stones that anchor you in the body versus stones that loosen you out of it.
+- **The general rule the community lands on.** [Reddit / firsthand] Start with calmers, change one stone at a time, and if dreams get worse rather than better, the fix is distance: nightstand first, then another room. Reports of vivid dream spikes in the first nights with a new activator stone, settling after several nights, are a recurring report pattern; so is the reverse report, calmer stones flattening recall for people chasing lucid dreams, though that one is more often implied by the lucidity guides than stated outright.
+- **Retrieval gap, stated honestly.** Direct r/Crystals, r/LucidDreaming, and r/Dreams threads could not be pulled verbatim in this research pass (the same Reddit access limit noted elsewhere in this corpus). The firsthand patterns above come from named forum and user quotes carried in crystal guides and from practitioner write-ups describing their clients and communities. The pattern level findings (vivid spikes, moldavite warnings, removal advice) are consistent across many independent sources, but this strand does not have raw subreddit threads to cite line by line, and does not pretend to.
+
+## 18.7 What is actually documented versus claimed
+
+- [Documented] **No lab evidence that crystals alter sleep or dreams.** No controlled study found in this research shows any crystal changing REM sleep, sleep staging, dream frequency, or dream content. Systematic evidence summaries of crystal healing (EBSCO Research Starters and others) state that no rigorous clinical study supports the claimed mechanisms (chakras, healing energies), and that reported benefits are attributable to placebo effect and to the meditation and mindfulness practices that accompany crystal use.
+- [Documented] **The French experiments.** Psychologist Christopher French and colleagues (Goldsmiths, University of London, 2001) had participants meditate with either real quartz or convincing fake glass crystals. Both groups reported similar sensations, and the reports tracked belief and expectation rather than which object was real. French's summary, widely quoted: there is no evidence crystal healing works over and above a placebo effect.
+- [Documented] **A newer controlled trial.** A 2025 randomized study summarized in evidence reviews compared rose quartz with a visually matched glass placebo over 14 days in 138 adults; anxiety reductions appeared among believers in both conditions, with no crystal-specific advantage detected. The sample was a general population, not a clinical one, so it does not test every claim, but it is the shape the evidence keeps taking.
+- [Documented] **The one real physical effect is not a healing one.** Quartz is piezoelectric: it generates a tiny charge under pressure, which is why quartz runs watches and ultrasound equipment. The effect is real physics and far too small to be a therapeutic energy radiating from a stone on a nightstand; evidence reviews classify using it as proof of crystal healing as pseudoscience.
+- [Documented] **What does have support: ritual, expectation, and sleep hygiene.** Placebo and expectation effects are themselves real and measurable, calming pre-sleep rituals genuinely help people fall asleep, and a fixed wind-down routine is standard sleep hygiene. One retail sleep guide states this framing plainly: crystals are best understood as ritual tools rather than sleep treatments, a bedtime cue that makes the transition to rest deliberate. Even a skeptical reading leaves the routine with working parts: same wind-down nightly, a tactile object to hold during slow breathing, an intention set before sleep, and a journal at the bedside, which is a documented dream recall practice in its own right.
+- [Research claim - contested] Claims that specific stones have specific frequencies that retune the sleeper, that moldavite's effects come from its extraterrestrial energy, and that lithium in lepidolite calms by contact are presented in the tradition as mechanisms. None has controlled evidence behind it, and the lepidolite version additionally fails on dose: trace lithium locked in a mica flake on a pillow is not a route of administration.
+- **Bottom line for this corpus.** The claims in Sections 18.2 to 18.6 are recorded as the tradition and the community present them, because that is what this knowledge base does. The documented section says the stone itself has no demonstrated effect on dreams; the ritual built around the stone (intention, wind-down, journaling) overlaps with practices that do have support in the rest of this corpus. Anyone using a stone for nightmares that are wrecking their sleep should treat the stone as a comfort object alongside, never instead of, actual sleep help, a point several of the nightmare guides themselves make.
+
+## 18.8 Source list
+
+Dream and lucid guides:
+- https://www.allcrystal.com/articles/crystals-for-lucid-dreaming/
+- https://www.allcrystal.com/articles/crystals-for-dreams/
+- https://tinyrituals.co/blogs/tiny-rituals/crystals-for-dreams?srsltid=AfmBOooZx2W-L0CdbL4WwsYcfe1KJUqG9W0kvm0lEUwUtb9_MgTAZza
+- https://spiritualark.com/best-crystals-for-lucid-dreaming/
+- https://www.tvi.show/dream-realms/the-use-of-crystals-and-stones-to-enhance-dreaming
+- https://astrologerglobal.com/crystals-for-dreaming/
+- https://crystalsalchemy.com/crystals-for-lucid-dreaming
+- https://crystalsalchemy.com/crystals-for-sleep
+- https://www.songofstones.com/blogs/metaphysical/crystals-for-dreams-and-dreaming
+- https://soulmatecrystal.com/blogs/soulmatecrystal-blogs/the-crystal-connection-using-gemstones-to-decode-and-enhance-your-dream-experiences
+- http://omtimes.com/2017/08/crystals-dreams-reworking-nightmares/
+- https://www.lemon8-app.com/@gerganamakeup/7597907046595363383?region=us
+
+Sleep, nightmare, and protection guides and firsthand roundups:
+- https://www.touchvintage.com/blogs/crystals/crystals-for-good-sleep
+- https://crystalstones.com/crystals-by-intention/sleep
+- https://contempocrystals.com/collections/crystals-for-sleep/celestite
+- https://gandharagems.com/blogs/news/healing-crystals-for-nightmares
+- https://www.unearthedcrystals.com.au/blogs/all-blogs/healing-crystals-for-nightmares-and-night-terrors
+- https://quartzwhisper.com/crystals-for-lucid-dreaming/
+- https://quartzwhisper.com/crystals-for-nightmares/
+- https://medium.com/@dr.neeti.kaushik/never-sleep-with-these-crystals-under-your-pillow-5-you-must-avoid-5-you-can-use-instead-b81610778298
+- https://ayanacrystals.com/blogs/blog/crystals-for-sleep-paralysis-protection
+- https://plentifulearth.com/energy-healing/protection-crystals-guide/
+- https://serendipitycrystals.co.uk/black-tourmaline-master-protector/
+- https://www.mooncatcrystals.com/blogs/news/black-tourmaline-in-bedroom
+- https://www.crystalvaults.com/crystal-reference-guide/crystals-for-insomnia/
+- http://www.ravencrystals.com/HOWLITE_df_96.html
+- https://www.mydreamcrystals.com/howlite/
+- https://hellofearless.com/blogs/blog//crystals-for-sleep-and-dreams/
+- https://sarahscoop.com/the-40-best-crystals-and-stones-for-nightmares-and-bad-dreams/
+
+Moldavite effects and warnings:
+- https://crystalsalchemy.com/moldavite-effects
+- https://onlineastrologyplanet.com/moldavite-properties/
+- https://subconsciousservant.com/moldavite-dangers/
+- https://www.divinetwist.com/moldavite-effects/
+- https://contemporaryflavour.com/2019/03/03/moldavite-stone-transformation-experiences/comment-page-1/
+
+Individual stones and older tradition (Melody and Hall lineages):
+- https://www.crystal-life.com/product/charoite-3/
+- https://mail.whizolosophy.com/category/immediate-family-relations/article-column/charoite-s-connection-to-desires-and-the-subconscious
+- https://www.crystalwind.ca/crystals-gems-elixirs/labradorite-meaning-healing-properties
+- https://www.energywithincrystals.com/blogs/the-crystal-library/labradorite/
+- https://www.subjectiichange.com/stone-meanings/?wmc-currency=CAD
+- http://infinitelightwithin.com/gemstone-properties/
+- https://www.haute-energy.com/pages/the-properties
+- https://a1crystals.com/properties-of-crystals/
+- https://www.scribd.com/document/53251233/Metaphysical-and-Healing-Properties-of-Gemstones
+- https://www.crystalwind.ca/crystalsandgems/crystal-tools/reference-guide-to-crystals-gems-and-stones
+
+History:
+- https://www.earthdate.org/episodes/legends-of-amethyst
+- https://www.scientificamerican.com/blog/rosetta-stones/the-origin-of-amethysts-may-leave-you-tingly/
+- https://www.controverscial.com/The%20Magic%20of%20Rocks%20and%20Stones%20-%20Amethyst.htm
+- https://wiccanow.com/dream-amethyst-crystal-meaning/
+- https://asianartnewspaper.com/jade-the-beginning-of-the-chinese-world/
+- https://www.gemporia.com/en-gb/gemology-hub/article/989/the-most-treasured-gemstones-of-ancient-egypt-and-ancient-china/
+- https://www.chinesethought.cn/EN/detail.aspx?nid=114&pid=130&id=10358
+- https://dsal.uchicago.edu/huntington/Exhibitions/PDFs/ChineseJadeInContext-Introductions.pdf
+
+Grids, cleansing, and charging:
+- https://www.solacely.co/en-us/blogs/crystals/crystal-grids-for-healing
+- https://www.kelseykuehl.com/post/crystal-grids
+- https://fiercelynxdesigns.com/blogs/articles/grid-crystals-how-to-design-charge-and-use-crystal-grids
+- https://www.lathajay.com/blog/crystals-grids-for-spiritual-growth-how-to-create-one-for-healing-manifestation
+- https://serenaloves.com/the-how-to-guide-for-crystal-gridding/
+- https://plusvalueindia.com/blogs/healing-crystals/creating-sacred-space-with-crystals-a-guide-to-gridding-your-home
+
+Safety (water, sun, toxicity):
+- https://www.crystals.com/blogs/news/which-crystals-can-go-in-water
+- https://www.crystaldestiny.com/blogs/news/crystal-safety-guide-toxic-crystals-precautions
+- https://www.crystaldestiny.com/blogs/news/how-to-cleanse-and-charge-your-crystals-complete-guide
+- https://crystalsalchemy.com/how-to-cleanse-crystals
+- https://writeralpha.com/learn/what-crystals-can-go-in-water
+
+Evidence and science coverage:
+- https://www.ebsco.com/research-starters/complementary-and-alternative-medicine/crystal-healing
+- https://www.galena.es/minerals/geology/2026/03/29/0748-Crystal_Healing_Facts_and_Myths.html
+- https://artofhealthyliving.com/crystals-belief-evidence-wellness/
+- https://biologyinsights.com/what-crystals-help-with-healing-and-what-science-says/
+- https://crystalreading.com/crystal-can-give-healing/
+- https://crystalreading.com/crystals-for-psychic-protection/

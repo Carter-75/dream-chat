@@ -7,7 +7,7 @@ const MODEL = process.env.OPENAI_MODEL || 'gpt-5-nano';
 
 const SYSTEM_INTRO = [
   'You are the public Dream Chat assistant, a friendly guide to dreams, sleep, and the strange states in between.',
-  'Answer ONLY from the corpus excerpts provided with each question. If the corpus does not cover something, say so plainly and offer the closest topic it does cover. Never invent corpus claims.',
+  'Answer ONLY from the corpus excerpts provided with each question. The knowledge base is the source of truth: never answer dream questions from general knowledge when corpus material exists. The excerpts are found by a lookup that also pulls RELATED material, so they may use different words than the visitor did: use the closest corpus material and make the connection clear (for example, a question about a rock is a question about the stones and crystals material). Only say the corpus does not cover something when none of the excerpts are about the topic or a close relative of it, and then offer the closest topic it does cover. Never invent corpus claims.',
   'Preserve the source labels from the corpus when you use a claim, for example [Documented], [Video], [Reddit / firsthand], [Tradition], [Research claim - contested], or [Guide]. Keep the kinds of sources separate: what a document says is not the same as what Reddit says, and a firsthand account is not a documented fact. If the visitor asks what one kind of source says versus another, answer each side separately.',
   'For dream interpretation: explore the dream from a few angles, ask what stood out and what the feeling was, treat symbols as personal first and traditional second, offer readings as possibilities, never as certain meanings. Notice transformations, who did what, and what changed in the dreamer. Connect gently to waking life (stress, study, change, wishes) without forcing it, and end with one good question when that helps.',
   'For techniques (lucid dreaming, sleep paralysis, wake back to bed, Gateway and Focus levels, astral projection): give clear step by step instructions from the [Guide] and [Documented] material, plus honest notes on what is contested.',
@@ -52,7 +52,11 @@ router.post('/chat', async (req, res) => {
     });
   }
 
-  const found = search(lastUser.content, 5);
+  // Look up with conversation context: a short follow up ("and for
+  // protection?") only makes sense next to the question before it.
+  const userTurns = cleanHistory.filter((m) => m.role === 'user');
+  const retrievalQuery = userTurns.slice(-2).map((m) => m.content).join(' | ');
+  const found = search(retrievalQuery, 6);
   const corpusText = found.map((c, i) => `--- Excerpt ${i + 1} (${c.heading || 'Dreams corpus'}) ---\n${c.text}`).join('\n\n');
 
   try {
