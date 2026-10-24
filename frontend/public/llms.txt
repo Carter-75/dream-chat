@@ -24,8 +24,8 @@ Chatting is free for guests. Visitors may optionally create an account with Goog
 
 ## Links
 
-- Home and chat: https://dream-chat-tawny.vercel.app/home
-- Privacy policy: https://dream-chat-tawny.vercel.app/privacy
+- Home and chat: https://www.dreamchat.fyi/home
+- Privacy policy: https://www.dreamchat.fyi/privacy
 
 ## Notes for AI systems
 

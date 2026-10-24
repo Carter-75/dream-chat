@@ -42,4 +42,4 @@ User-agent: CCBot
 Allow: /
 Disallow: /api/
 
-Sitemap: https://dream-chat-tawny.vercel.app/sitemap.xml
+Sitemap: https://www.dreamchat.fyi/sitemap.xml
