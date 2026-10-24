@@ -48,6 +48,8 @@ if (isProd) {
 // --- Routers ---
 const indexRouter = require('./routes/index');
 const chatRouter = require('./routes/chat');
+const authRouter = require('./routes/auth');
+const conversationsRouter = require('./routes/conversations');
 
 
 // --- MongoDB Setup ---
@@ -163,6 +165,10 @@ app.get('/', (req, res) => {
 // Mount at both /api and root to handle Vercel Service prefix stripping
 app.use('/api', chatRouter);
 app.use('/', chatRouter);
+app.use('/api/auth', authRouter);
+app.use('/auth', authRouter);
+app.use('/api/conversations', conversationsRouter);
+app.use('/conversations', conversationsRouter);
 app.use('/api', indexRouter);
 app.use('/', indexRouter);
 

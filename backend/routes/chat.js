@@ -28,6 +28,8 @@ router.get('/status', (req, res) => {
   res.json({
     configured: !!process.env.OPENAI_API_KEY,
     model: MODEL,
+    googleClientId: process.env.GOOGLE_CLIENT_ID || null,
+    accounts: !!process.env.MONGODB_URI,
     limits
   });
 });

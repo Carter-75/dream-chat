@@ -66,3 +66,70 @@
 .fineprint { color: rgba(189, 187, 224, 0.6); font-size: 0.8rem; margin: 0.7rem 0 0; text-align: center; }
 .footer { text-align: center; color: #a09dc4; font-size: 0.85rem; line-height: 1.6; margin-top: 1.5rem; }
 .footer .dim { color: rgba(160, 157, 196, 0.65); }
+
+/* Accounts, sidebar, saved conversations */
+.account-bar { margin-top: 1rem; display: flex; gap: 0.7rem; align-items: center; justify-content: center; flex-wrap: wrap; }
+.account-email { color: #c3ccff; font-size: 0.9rem; }
+.ghost-btn { border: 1px solid rgba(165, 180, 255, 0.5); background: rgba(88, 101, 242, 0.12); color: #dbe1ff; border-radius: 999px; padding: 0.45rem 1rem; cursor: pointer; font-size: 0.9rem; }
+.ghost-btn:hover { background: rgba(88, 101, 242, 0.3); }
+.ghost-btn.strong { font-weight: 700; }
+.layout { max-width: 1120px; display: flex; gap: 1rem; align-items: flex-start; }
+.layout .chat-card { flex: 1; min-width: 0; }
+.chats-toggle { display: none; }
+.sidebar {
+  width: 264px; flex-shrink: 0; background: rgba(16, 14, 40, 0.82);
+  border: 1px solid rgba(139, 124, 255, 0.35); border-radius: 20px; padding: 0.9rem;
+  backdrop-filter: blur(8px); max-height: 74vh; overflow-y: auto;
+}
+.new-chat { width: 100%; background: linear-gradient(90deg, #5865f2, #8b5cf6); color: #fff; border: 0; border-radius: 12px; padding: 0.65rem; font-weight: 700; cursor: pointer; }
+.side-label { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: #9d97d8; margin: 0.9rem 0 0.4rem; }
+.side-empty { color: rgba(189, 187, 224, 0.6); font-size: 0.85rem; line-height: 1.5; }
+.convo-list { display: flex; flex-direction: column; gap: 0.35rem; }
+.convo { border-radius: 12px; padding: 0.45rem 0.55rem; border: 1px solid transparent; }
+.convo:hover { background: rgba(255, 255, 255, 0.04); }
+.convo.active { background: rgba(88, 101, 242, 0.18); border-color: rgba(138, 155, 255, 0.4); }
+.convo-title { display: block; width: 100%; text-align: left; background: none; border: 0; color: #f0efff; font-size: 0.92rem; cursor: pointer; padding: 0.15rem 0; line-height: 1.35; }
+.convo-actions { display: flex; gap: 0.55rem; margin-top: 0.2rem; }
+.convo-actions button { background: none; border: 0; color: #a5b4ff; font-size: 0.74rem; cursor: pointer; padding: 0; }
+.convo-actions button:hover { color: #dbe1ff; text-decoration: underline; }
+.convo-actions button.danger { color: #ff9db1; }
+.confirm-row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 0.4rem; font-size: 0.78rem; color: #ffd9e0; }
+.confirm-row button { border: 1px solid rgba(165, 180, 255, 0.4); background: none; color: #dbe1ff; border-radius: 8px; padding: 0.25rem 0.6rem; cursor: pointer; font-size: 0.78rem; }
+.confirm-row button.danger { border-color: rgba(255, 120, 150, 0.6); color: #ff9db1; }
+.rename-form { display: flex; gap: 0.4rem; }
+.rename-form input { flex: 1; min-width: 0; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(165, 180, 255, 0.6); border-radius: 8px; color: #fff; padding: 0.4rem 0.5rem; font-size: 0.9rem; }
+.rename-form button { background: rgba(88, 101, 242, 0.4); color: #fff; border: 0; border-radius: 8px; padding: 0.4rem 0.7rem; cursor: pointer; }
+.archived-toggle { margin-top: 0.9rem; background: none; border: 0; color: #a5b4ff; font-size: 0.8rem; cursor: pointer; padding: 0; }
+.archived-toggle:hover { text-decoration: underline; }
+.convo-list.archived { margin-top: 0.5rem; opacity: 0.85; }
+
+.toast { background: rgba(120, 255, 190, 0.12); border: 1px solid rgba(120, 255, 190, 0.4); color: #b9ffd9; border-radius: 10px; padding: 0.6rem 0.8rem; margin-bottom: 0.8rem; font-size: 0.92rem; }
+.save-bar { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; justify-content: space-between; background: rgba(88, 101, 242, 0.16); border: 1px solid rgba(138, 155, 255, 0.45); border-radius: 12px; padding: 0.6rem 0.8rem; margin-bottom: 0.8rem; font-size: 0.92rem; }
+.save-bar button { background: linear-gradient(90deg, #5865f2, #8b5cf6); color: #fff; border: 0; border-radius: 10px; padding: 0.5rem 1rem; font-weight: 700; cursor: pointer; }
+
+/* Auth modal */
+.modal-backdrop { position: fixed; inset: 0; background: rgba(3, 3, 14, 0.72); display: flex; align-items: center; justify-content: center; z-index: 50; padding: 1rem; }
+.modal { position: relative; width: 100%; max-width: 400px; background: #14122e; border: 1px solid rgba(139, 124, 255, 0.45); border-radius: 20px; padding: 1.6rem 1.4rem; box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6); }
+.modal h2 { margin: 0 0 0.3rem; font-size: 1.4rem; }
+.modal-sub { color: #bdbbe0; margin: 0 0 1.1rem; font-size: 0.92rem; }
+.modal-close { position: absolute; top: 0.7rem; right: 0.9rem; background: none; border: 0; color: #a5b4ff; font-size: 1.2rem; cursor: pointer; }
+.google-wrap { display: flex; justify-content: center; min-height: 44px; }
+.divider { display: flex; align-items: center; gap: 0.8rem; color: #9d97d8; font-size: 0.8rem; margin: 1rem 0; }
+.divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: rgba(165, 180, 255, 0.25); }
+.modal label { display: block; font-size: 0.85rem; color: #c3ccff; margin-bottom: 0.8rem; }
+.modal input { display: block; width: 100%; box-sizing: border-box; margin-top: 0.3rem; background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 10px; color: #fff; padding: 0.7rem 0.8rem; font-size: 1rem; }
+.modal input:focus { border-color: rgba(165, 180, 255, 0.7); outline: none; }
+.auth-error { color: #ff9db1; font-size: 0.88rem; margin: 0 0 0.8rem; line-height: 1.45; }
+.auth-submit { width: 100%; background: linear-gradient(90deg, #5865f2, #8b5cf6); color: #fff; border: 0; border-radius: 12px; padding: 0.8rem; font-weight: 700; font-size: 1rem; cursor: pointer; }
+.auth-submit:disabled { opacity: 0.5; cursor: default; }
+.mode-switch { text-align: center; color: #bdbbe0; font-size: 0.88rem; margin: 1rem 0 0; }
+.mode-switch button { background: none; border: 0; color: #a5b4ff; cursor: pointer; font-size: 0.88rem; padding: 0; }
+.mode-switch button:hover { text-decoration: underline; }
+
+@media (max-width: 860px) {
+  .layout { flex-direction: column; }
+  .chats-toggle { display: inline-block; background: rgba(88, 101, 242, 0.2); border: 1px solid rgba(165, 180, 255, 0.5); color: #dbe1ff; border-radius: 999px; padding: 0.45rem 1rem; cursor: pointer; }
+  .sidebar { display: none; width: 100%; box-sizing: border-box; max-height: 50vh; }
+  .sidebar.open { display: block; }
+  .layout .chat-card { width: 100%; box-sizing: border-box; }
+}

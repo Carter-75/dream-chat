@@ -3,45 +3,134 @@
   <div class="moon"></div>
 
   <header class="wrap hero">
-    <p class="kicker">No sign up. Just dreams.</p>
+    <p class="kicker">Free. No sign up needed.</p>
     <h1>Dream <span>Chat</span></h1>
     <p class="sub">Ask about your dreams, learn to lucid dream, explore sleep paralysis, the Gateway Process, Mall World, and the stories people swear are real. Answers come from a labeled library: documented research, videos, firsthand accounts, and traditions, kept separate so you always know what kind of claim you are hearing.</p>
+
+    @if (auth.accountsOn()) {
+      <div class="account-bar">
+        @if (auth.user()) {
+          <span class="account-email">{{ auth.user() }}</span>
+          <button type="button" class="ghost-btn" (click)="signOut()">Sign out</button>
+        } @else {
+          <button type="button" class="ghost-btn strong" (click)="openAuth()">Sign in to save your chats</button>
+        }
+      </div>
+    }
   </header>
 
   <!-- Ad slot: top banner. Paste AdSense code here when ads go live. -->
   <div class="wrap ad-slot" aria-hidden="true"><span>Advertisement</span></div>
 
-  <main class="wrap chat-card">
-    @if (notice()) {
-      <div class="notice">{{ notice() }}</div>
-    }
-    <div #scrollBox class="messages">
-      @for (m of messages(); track $index) {
-        <div class="row" [class.me]="m.role === 'user'">
-          <div class="bubble" [class.me]="m.role === 'user'">
-            <p class="who">{{ m.role === 'user' ? 'You' : 'Dream Guide' }}</p>
-            <p class="text">{{ m.content }}</p>
+  <div class="wrap layout">
+    @if (auth.user()) {
+      <button type="button" class="chats-toggle" (click)="sidebarOpen.set(!sidebarOpen())">
+        {{ sidebarOpen() ? 'Close chats' : 'Your chats' }}
+      </button>
+      <aside class="sidebar" [class.open]="sidebarOpen()">
+        <button type="button" class="new-chat" (click)="newChat()">+ New chat</button>
+        <p class="side-label">Your conversations</p>
+        <div class="convo-list">
+          @for (c of convos(); track c.id) {
+            <div class="convo" [class.active]="c.id === currentId()">
+              @if (renamingId() === c.id) {
+                <form class="rename-form" (ngSubmit)="commitRename(c)">
+                  <input name="rename" [ngModel]="renameDraft()" (ngModelChange)="renameDraft.set($event)" maxlength="120">
+                  <button type="submit">Save</button>
+                </form>
+              } @else {
+                <button type="button" class="convo-title" (click)="openConvo(c)">{{ c.title }}</button>
+                <div class="convo-actions">
+                  <button type="button" (click)="startRename(c)">Rename</button>
+                  <button type="button" (click)="archiveConvo(c, true)">Archive</button>
+                  <button type="button" class="danger" (click)="askDelete(c)">Delete</button>
+                </div>
+                @if (confirmDeleteId() === c.id) {
+                  <div class="confirm-row">
+                    <span>Delete this chat for good?</span>
+                    <button type="button" class="danger strong" (click)="doDelete(c)">Yes, delete</button>
+                    <button type="button" (click)="askDelete(c)">Keep</button>
+                  </div>
+                }
+              }
+            </div>
+          }
+          @if (!convos().length) {
+            <p class="side-empty">No saved chats yet. Ask something and it will be kept here.</p>
+          }
+        </div>
+
+        <button type="button" class="archived-toggle" (click)="toggleArchived()">
+          {{ showArchived() ? 'Hide archived' : 'Show archived' }}
+        </button>
+        @if (showArchived()) {
+          <div class="convo-list archived">
+            @for (c of archivedConvos(); track c.id) {
+              <div class="convo">
+                <button type="button" class="convo-title" (click)="openConvo(c)">{{ c.title }}</button>
+                <div class="convo-actions">
+                  <button type="button" (click)="archiveConvo(c, false)">Unarchive</button>
+                  <button type="button" class="danger" (click)="askDelete(c)">Delete</button>
+                </div>
+                @if (confirmDeleteId() === c.id) {
+                  <div class="confirm-row">
+                    <span>Delete this chat for good?</span>
+                    <button type="button" class="danger strong" (click)="doDelete(c)">Yes, delete</button>
+                    <button type="button" (click)="askDelete(c)">Keep</button>
+                  </div>
+                }
+              </div>
+            }
+            @if (!archivedConvos().length) {
+              <p class="side-empty">Nothing archived.</p>
+            }
           </div>
+        }
+      </aside>
+    }
+
+    <main class="chat-card" [class.with-side]="!!auth.user()">
+      @if (notice()) {
+        <div class="notice">{{ notice() }}</div>
+      }
+      @if (savedToast()) {
+        <div class="toast">{{ savedToast() }}</div>
+      }
+      <div #scrollBox class="messages">
+        @for (m of messages(); track $index) {
+          <div class="row" [class.me]="m.role === 'user'">
+            <div class="bubble" [class.me]="m.role === 'user'">
+              <p class="who">{{ m.role === 'user' ? 'You' : 'Dream Guide' }}</p>
+              <p class="text">{{ m.content }}</p>
+            </div>
+          </div>
+        }
+        @if (sending()) {
+          <div class="row"><div class="bubble typing">Dreaming up an answer<span class="dots">...</span></div></div>
+        }
+      </div>
+
+      <div class="chips">
+        @for (chip of chips; track chip) {
+          <button type="button" class="chip" (click)="useChip(chip)">{{ chip }}</button>
+        }
+      </div>
+
+      @if (!auth.user() && auth.accountsOn() && hasUnsaved()) {
+        <div class="save-bar">
+          <span>Want to keep this conversation?</span>
+          <button type="button" (click)="openAuth()">Save this conversation</button>
         </div>
       }
-      @if (sending()) {
-        <div class="row"><div class="bubble typing">Dreaming up an answer<span class="dots">...</span></div></div>
-      }
-    </div>
 
-    <div class="chips">
-      @for (chip of chips; track chip) {
-        <button type="button" class="chip" (click)="useChip(chip)">{{ chip }}</button>
-      }
-    </div>
-
-    <form class="composer" (ngSubmit)="send()">
-      <input name="draft" [ngModel]="draft()" (ngModelChange)="draft.set($event)"
-             placeholder="Tell me your dream, or ask a question..." autocomplete="off" maxlength="2000">
-      <button type="submit" [disabled]="sending() || !draft().trim()">Send</button>
-    </form>
-    <p class="fineprint">Free to use. A daily limit per visitor keeps the lights on.</p>
-  </main>
+      <form class="composer" (ngSubmit)="send()">
+        <input name="draft" [ngModel]="draft()" (ngModelChange)="draft.set($event)"
+               placeholder="Tell me your dream, or ask a question..." autocomplete="off" maxlength="2000">
+        <button type="submit" [disabled]="sending() || !draft().trim()">Send</button>
+      </form>
+      <p class="fineprint">Free to use. A daily limit per visitor keeps the lights on.@if (!auth.user() && auth.accountsOn()) { Sign in to save your conversations.}</p>
+    </main>
+  </div>
 
   <!-- Ad slot: bottom rectangle. Paste AdSense code here when ads go live. -->
   <div class="wrap ad-slot tall" aria-hidden="true"><span>Advertisement</span></div>
@@ -51,4 +140,41 @@
     <p class="dim">Built from a unified dreams knowledge base. Sources stay labeled: [Documented], [Video], [Reddit / firsthand], [Tradition], [Research claim - contested], [Guide].</p>
     <p class="dim">On your phone? Use your browser menu and choose "Add to Home screen" or "Install app" to keep Dream Chat on your home screen like an app.</p>
   </footer>
+
+  @if (showAuth()) {
+    <div class="modal-backdrop" (click)="closeAuth()">
+      <div class="modal" (click)="$event.stopPropagation()">
+        <button type="button" class="modal-close" (click)="closeAuth()" aria-label="Close">x</button>
+        <h2>{{ authMode() === 'register' ? 'Save your dream chats' : 'Welcome back' }}</h2>
+        <p class="modal-sub">Just your email. No username, nothing else.</p>
+
+        <div class="google-wrap">
+          <div #googleBtn></div>
+        </div>
+        <div class="divider"><span>or</span></div>
+
+        <form (ngSubmit)="submitAuth()">
+          <label>Email
+            <input type="email" name="authEmail" [ngModel]="authEmail()" (ngModelChange)="authEmail.set($event)" autocomplete="email" required>
+          </label>
+          <label>Password
+            <input type="password" name="authPassword" [ngModel]="authPassword()" (ngModelChange)="authPassword.set($event)"
+                   [attr.autocomplete]="authMode() === 'register' ? 'new-password' : 'current-password'" required>
+          </label>
+          @if (authError()) {
+            <p class="auth-error">{{ authError() }}</p>
+          }
+          <button type="submit" class="auth-submit" [disabled]="authBusy()">
+            {{ authMode() === 'register' ? 'Create account' : 'Sign in' }}
+          </button>
+        </form>
+
+        @if (authMode() === 'register') {
+          <p class="mode-switch">Already have an account? <button type="button" (click)="switchMode('login')">Sign in</button></p>
+        } @else {
+          <p class="mode-switch">New here? <button type="button" (click)="switchMode('register')">Create an account</button></p>
+        }
+      </div>
+    </div>
+  }
 </div>
