@@ -1,6 +1,7 @@
 /* Dream Chat: dark, dreamy, night sky */
 .sky {
   min-height: 100vh;
+  min-height: 100dvh;
   position: relative;
   color: #e8e6ff;
   background:
@@ -27,7 +28,8 @@
   box-shadow: 0 0 60px 18px rgba(255, 244, 190, 0.25);
   pointer-events: none;
 }
-.wrap { max-width: 860px; margin: 0 auto; position: relative; }
+.wrap { max-width: 1120px; margin: 0 auto; position: relative; }
+.footer p { max-width: 860px; margin-left: auto; margin-right: auto; }
 .hero { text-align: center; margin-bottom: 1.5rem; }
 .kicker { letter-spacing: 0.3em; text-transform: uppercase; font-size: 0.72rem; color: #a5b4ff; margin: 0 0 0.6rem; }
 .hero h1 { font-size: clamp(2.6rem, 8vw, 4.4rem); margin: 0; font-weight: 800; line-height: 1.05; }
@@ -46,20 +48,22 @@
   padding: 1.1rem; backdrop-filter: blur(8px);
 }
 .notice { background: rgba(255, 209, 102, 0.12); border: 1px solid rgba(255, 209, 102, 0.4); color: #ffe1a1; border-radius: 10px; padding: 0.6rem 0.8rem; margin-bottom: 0.8rem; font-size: 0.92rem; }
-.messages { height: min(52vh, 520px); overflow-y: auto; display: flex; flex-direction: column; gap: 0.7rem; padding: 0.3rem; }
+.messages { height: min(52vh, 520px); height: min(56dvh, 560px); overflow-y: auto; display: flex; flex-direction: column; gap: 0.7rem; padding: 0.3rem; scrollbar-width: thin; scrollbar-color: rgba(139, 124, 255, 0.45) transparent; }
+.messages::-webkit-scrollbar { width: 6px; }
+.messages::-webkit-scrollbar-thumb { background: rgba(139, 124, 255, 0.45); border-radius: 3px; }
 .row { display: flex; }
 .row.me { justify-content: flex-end; }
 .bubble { max-width: 82%; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.09); border-radius: 16px 16px 16px 4px; padding: 0.7rem 0.9rem; }
 .bubble.me { background: rgba(88, 101, 242, 0.32); border-color: rgba(138, 155, 255, 0.45); border-radius: 16px 16px 4px 16px; }
 .who { margin: 0 0 0.3rem; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: #9d97d8; }
 .bubble.me .who { color: #c3ccff; }
-.text { margin: 0; white-space: pre-wrap; line-height: 1.55; color: #f0efff; }
+.text { margin: 0; white-space: pre-wrap; line-height: 1.55; color: #f0efff; overflow-wrap: anywhere; }
 .typing { color: #bdbbe0; font-style: italic; }
 .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.9rem 0; }
 .chip { border: 1px solid rgba(165, 180, 255, 0.45); background: rgba(88, 101, 242, 0.14); color: #dbe1ff; border-radius: 999px; padding: 0.45rem 0.9rem; cursor: pointer; font-size: 0.9rem; }
 .chip:hover { background: rgba(88, 101, 242, 0.3); }
 .composer { display: flex; gap: 0.6rem; }
-.composer input { flex: 1; background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.16); border-radius: 12px; color: #fff; padding: 0.85rem 1rem; font-size: 1rem; outline: none; }
+.composer input { flex: 1; min-width: 0; background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.16); border-radius: 12px; color: #fff; padding: 0.85rem 1rem; font-size: 1rem; outline: none; }
 .composer input:focus { border-color: rgba(165, 180, 255, 0.7); }
 .composer button { background: linear-gradient(90deg, #5865f2, #8b5cf6); color: #fff; border: 0; border-radius: 12px; padding: 0.85rem 1.4rem; font-weight: 700; cursor: pointer; }
 .composer button:disabled { opacity: 0.45; cursor: default; }
@@ -89,9 +93,9 @@
 .convo { border-radius: 12px; padding: 0.45rem 0.55rem; border: 1px solid transparent; }
 .convo:hover { background: rgba(255, 255, 255, 0.04); }
 .convo.active { background: rgba(88, 101, 242, 0.18); border-color: rgba(138, 155, 255, 0.4); }
-.convo-title { display: block; width: 100%; text-align: left; background: none; border: 0; color: #f0efff; font-size: 0.92rem; cursor: pointer; padding: 0.15rem 0; line-height: 1.35; }
-.convo-actions { display: flex; gap: 0.55rem; margin-top: 0.2rem; }
-.convo-actions button { background: none; border: 0; color: #a5b4ff; font-size: 0.74rem; cursor: pointer; padding: 0; }
+.convo-title { display: block; width: 100%; text-align: left; background: none; border: 0; color: #f0efff; font-size: 0.92rem; cursor: pointer; padding: 0.3rem 0; line-height: 1.35; }
+.convo-actions { display: flex; gap: 0.4rem; margin-top: 0.15rem; }
+.convo-actions button { background: none; border: 0; color: #a5b4ff; font-size: 0.78rem; cursor: pointer; padding: 0.35rem 0.3rem; }
 .convo-actions button:hover { color: #dbe1ff; text-decoration: underline; }
 .convo-actions button.danger { color: #ff9db1; }
 .confirm-row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 0.4rem; font-size: 0.78rem; color: #ffd9e0; }
@@ -110,7 +114,7 @@
 
 /* Auth modal */
 .modal-backdrop { position: fixed; inset: 0; background: rgba(3, 3, 14, 0.72); display: flex; align-items: center; justify-content: center; z-index: 50; padding: 1rem; }
-.modal { position: relative; width: 100%; max-width: 400px; background: #14122e; border: 1px solid rgba(139, 124, 255, 0.45); border-radius: 20px; padding: 1.6rem 1.4rem; box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6); }
+.modal { position: relative; width: 100%; max-width: 400px; max-height: 92dvh; overflow-y: auto; background: #14122e; border: 1px solid rgba(139, 124, 255, 0.45); border-radius: 20px; padding: 1.6rem 1.4rem; box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6); }
 .modal h2 { margin: 0 0 0.3rem; font-size: 1.4rem; }
 .modal-sub { color: #bdbbe0; margin: 0 0 1.1rem; font-size: 0.92rem; }
 .modal-close { position: absolute; top: 0.7rem; right: 0.9rem; background: none; border: 0; color: #a5b4ff; font-size: 1.2rem; cursor: pointer; }
@@ -127,7 +131,21 @@
 .mode-switch button { background: none; border: 0; color: #a5b4ff; cursor: pointer; font-size: 0.88rem; padding: 0; }
 .mode-switch button:hover { text-decoration: underline; }
 
+button:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid rgba(165, 180, 255, 0.85); outline-offset: 2px; }
+
 @media (max-width: 860px) {
+  .sky { padding: 1.6rem 0.8rem 2.2rem; }
+  .moon { width: 52px; height: 52px; top: 1.1rem; right: 5vw; opacity: 0.9; box-shadow: 0 0 40px 12px rgba(255, 244, 190, 0.22); }
+  .sub { font-size: 0.97rem; }
+  .ad-slot { min-height: 60px; }
+  .ad-slot.tall { min-height: 90px; }
+  .chat-card { padding: 0.85rem; border-radius: 16px; }
+  .messages { height: min(48dvh, 480px); }
+  .bubble { max-width: 88%; }
+  .chips { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 0.35rem; scrollbar-width: none; }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip { white-space: nowrap; flex-shrink: 0; }
+  .composer button { padding: 0.85rem 1.05rem; }
   .layout { flex-direction: column; }
   .chats-toggle { display: inline-block; background: rgba(88, 101, 242, 0.2); border: 1px solid rgba(165, 180, 255, 0.5); color: #dbe1ff; border-radius: 999px; padding: 0.45rem 1rem; cursor: pointer; }
   .sidebar { display: none; width: 100%; box-sizing: border-box; max-height: 50vh; }

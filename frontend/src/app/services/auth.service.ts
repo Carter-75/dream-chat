@@ -83,7 +83,7 @@ export class AuthService {
       size: 'large',
       shape: 'pill',
       text: 'continue_with',
-      width: 280
+      width: Math.max(200, Math.min(320, el.clientWidth || 280))
     });
   }
 }
