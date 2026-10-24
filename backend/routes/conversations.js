@@ -41,11 +41,12 @@ router.get('/', async (req, res) => {
 // Auto name a new conversation from its first user prompt (Carter's rule:
 // the title comes from the first prompt's context, ChatGPT style). Uses the
 // same cheap model as the chat; any failure keeps the truncation fallback.
+// Returns the generated title, or null to keep the fallback.
 async function autoTitle(convoId, messages) {
   try {
-    if (!process.env.OPENAI_API_KEY) return;
+    if (!process.env.OPENAI_API_KEY) return null;
     const firstUser = messages.find((m) => m.role === 'user');
-    if (!firstUser || firstUser.content.trim().length < 12) return;
+    if (!firstUser || firstUser.content.trim().length < 12) return null;
     const OpenAI = require('openai');
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
     // gpt-5-nano spends completion tokens on reasoning first, so the
@@ -66,9 +67,12 @@ async function autoTitle(convoId, messages) {
     title = title.replace(/["']/g, '').replace(/\u2014/g, ', ').replace(/\u2013/g, '-').replace(/\s+/g, ' ').trim().slice(0, 60);
     if (title.length >= 3) {
       await Conversation.updateOne({ _id: convoId }, { $set: { title } });
+      return title;
     }
+    return null;
   } catch (err) {
     console.error('auto title error:', err.message);
+    return null;
   }
 }
 
@@ -80,9 +84,14 @@ router.post('/', async (req, res) => {
       title: titleFrom(messages),
       messages
     });
-    res.status(201).json({ id: String(convo._id), title: convo.title });
-    // Fire and forget: the list refresh picks the smart title up seconds later.
-    autoTitle(convo._id, messages);
+    // Generate the title BEFORE responding: on serverless hosting, work
+    // fired after the response can be frozen before it finishes. Capped
+    // at 6 seconds so a slow title call never blocks saving for long.
+    const smart = await Promise.race([
+      autoTitle(convo._id, messages),
+      new Promise((resolve) => setTimeout(() => resolve(null), 6000))
+    ]);
+    res.status(201).json({ id: String(convo._id), title: smart || convo.title });
   } catch (err) {
     console.error('conversations create error:', err.message);
     res.status(500).json({ error: 'Could not save that conversation.' });
