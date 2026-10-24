@@ -66,6 +66,7 @@
 .fineprint { color: rgba(189, 187, 224, 0.6); font-size: 0.8rem; margin: 0.7rem 0 0; text-align: center; }
 .footer { text-align: center; color: #a09dc4; font-size: 0.85rem; line-height: 1.6; margin-top: 1.5rem; }
 .footer .dim { color: rgba(160, 157, 196, 0.65); }
+.footer-link { color: #a5b4ff; }
 
 /* Accounts, sidebar, saved conversations */
 .account-bar { margin-top: 1rem; display: flex; gap: 0.7rem; align-items: center; justify-content: center; flex-wrap: wrap; }

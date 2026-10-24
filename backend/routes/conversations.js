@@ -48,16 +48,21 @@ async function autoTitle(convoId, messages) {
     if (!firstUser || firstUser.content.trim().length < 12) return;
     const OpenAI = require('openai');
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-    const completion = await client.chat.completions.create({
-      model: process.env.OPENAI_MODEL || 'gpt-5-nano',
-      reasoning_effort: 'low',
-      max_completion_tokens: 60,
-      messages: [
-        { role: 'system', content: 'Write a short title for a dream chat conversation. Use 3 to 6 words. No quotes, no punctuation at the end, no em dashes. Base it only on the user message.' },
-        { role: 'user', content: firstUser.content.slice(0, 500) }
-      ]
-    });
-    let title = (completion.choices[0] && completion.choices[0].message && completion.choices[0].message.content) || '';
+    // gpt-5-nano spends completion tokens on reasoning first, so the
+    // budget must leave room after that (same fix as the chat route).
+    let title = '';
+    for (let attempt = 0; attempt < 2 && !title; attempt++) {
+      const completion = await client.chat.completions.create({
+        model: process.env.OPENAI_MODEL || 'gpt-5-nano',
+        reasoning_effort: 'low',
+        max_completion_tokens: 400,
+        messages: [
+          { role: 'system', content: 'Write a short title for a dream chat conversation. Use 3 to 6 words. No quotes, no punctuation at the end, no em dashes. Base it only on the user message.' },
+          { role: 'user', content: firstUser.content.slice(0, 500) }
+        ]
+      });
+      title = ((completion.choices[0] && completion.choices[0].message && completion.choices[0].message.content) || '').trim();
+    }
     title = title.replace(/["']/g, '').replace(/\u2014/g, ', ').replace(/\u2013/g, '-').replace(/\s+/g, ' ').trim().slice(0, 60);
     if (title.length >= 3) {
       await Conversation.updateOne({ _id: convoId }, { $set: { title } });
