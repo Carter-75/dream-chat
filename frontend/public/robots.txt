@@ -1,0 +1,45 @@
+# Dream Chat robots.txt
+# Everyone welcome, including search and AI crawlers. The API is not content.
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# AI search and assistant crawlers, explicitly welcome
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /api/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /api/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /api/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /api/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /api/
+
+User-agent: CCBot
+Allow: /
+Disallow: /api/
+
+Sitemap: https://dream-chat-tawny.vercel.app/sitemap.xml
